@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>map_test</title>
+  <style>
+    *{
+      outline: 1px solid black;
+    }
+    .distorted-circle {
+      /* いびつな円 */
+      width: 150px;
+      height: 150px;
+      border-radius: 50% 70% 90% 80%; /* 左上、右上、右下、左下 */
+      background: #FF5252;
+    }
+
+    .trapezoid {
+      /*台形*/
+      width: 90px; /* 幅 */
+      height: 0px; /* y位置 */
+      border-bottom: 150px solid #43A047; /* 高さ */
+      border-left: 0px solid transparent; /* 左側の角度 */
+      border-right: 90px solid transparent; /* 右側の角度 */
+    }
+
+    .upside-down-trapezoid {
+      /*台形*/
+      width: 90px; /* 幅 */
+      height: 0px; /* y位置 */
+      border-top: 150px solid #FF5252; /* 高さ */
+      border-left: 90px solid transparent; /* 左側の角度 */
+      border-right: 0px solid transparent; /* 右側の角度 */
+    }
+
+    .parallel-quadrangle-a {
+      /* 平行四角形 */
+      margin: 0 40px;
+      width: 120px;
+      height: 120px;
+      transform: skewX(25deg);
+      background: #EF6C00;
+    }
+
+    .parallel-quadrangle-b{
+      /* 平行四角形 */
+      margin: 0 40px;
+      width: 120px;
+      height: 120px;
+      transform: skewX(-25deg);
+      background: #43A047;
+    }
+
+    .rhombus-a {
+      /* ひし形 */
+      width: 100px;
+      height: 100px;
+      transform: rotate(45deg);
+      background: #EF6C00;
+    }
+
+    .rhombus-b {
+      /* ひし形 */
+      width: 100px;
+      height: 100px;
+      transform: rotate(45deg) skew(15deg,15deg);
+      background: #43A047;
+    }
+
+    .equilateral-triangle {
+      /* 三角形 */
+      width: 0px;
+      border-bottom: 150px solid #43A047; /* 高さ */
+      border-right: 86.6px solid transparent; /* 左辺の長さ */
+      border-left: 86.6px solid transparent; /* 右辺の長さ */
+    }
+
+    .isosceles-triangle {
+      /* 二等辺三角形 */
+      width: 0;
+      border-bottom: 150px solid #FF5252;
+      border-right: 50px solid transparent;
+      border-left: 50px solid transparent;
+    }
+
+    .hexagon-1 {
+      /* 六角形 */
+      position: relative;
+      width: 150px;
+      height: 130px;
+    }
+
+    .hexagon-1::before {
+      content: "";
+      width: 150px;
+      position: absolute;
+      border-bottom: 64.95px solid #3cb371;
+      border-left: 37.5px solid transparent;
+      border-right: 37.5px solid transparent;
+      box-sizing: border-box;
+    }
+
+    .hexagon-1::after {
+      content: "";
+      width: 150px;
+      position: absolute;
+      top: 64.95px;
+      border-top: 64.95px solid #3cb371;
+      border-left: 37.5px solid transparent;
+      border-right: 37.5px solid transparent;
+      box-sizing: border-box;
+    }
+
+    .half-moon-a {
+      /* 半円 */
+      width: 75px;
+      height: 150px;
+      border-radius: 75px 0 0 75px;
+      background: #0091EA;
+    }
+
+    .half-moon-b {
+      width: 75px;
+      height: 150px;
+      border-radius: 0 75px 75px 0;
+      /* background: #FF5252; */
+      border: 1px solid #FF5252;
+    }
+
+    .half-moon-c {
+      width: 150px;
+      height: 75px;
+      border-radius: 0 0 75px 75px;
+      background: #43A047;
+    }
+
+    .half-moon-d {
+      width: 150px;
+      height: 75px;
+      border-radius: 75px 75px 0 0;
+      background: #EF6C00;
+    }
+  </style>
+</head>
+<body>
+  <div class="distorted-circle"></div>
+  <div class="trapezoid"></div>
+  <div class="upside-down-trapezoid"></div>
+  <div class="parallel-quadrangle-a"></div>
+  <div class="parallel-quadrangle-b"></div>
+  <div class="rhombus-a"></div>
+  <div class="rhombus-b"></div>
+  <div class="equilateral-triangle"></div>
+  <div class="isosceles-triangle"></div>
+  <div class="hexagon-1"></div>
+  <div class="half-moon-a"></div>
+  <div class="half-moon-b"></div>
+  <div class="half-moon-c"></div>
+  <div class="half-moon-d"></div>
+</body>
+</html>
