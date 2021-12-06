@@ -73,3 +73,12 @@
     height: 18px;
     z-index: auto; /* 重ねる */
 }
+
+#hole{
+    position:absolute;
+    cursor:pointer;
+    top: 20%;
+    left: 35%;
+    width: 61px;
+    height: 134px;
+}
