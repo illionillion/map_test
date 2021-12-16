@@ -82,3 +82,12 @@
     width: 61px;
     height: 134px;
 }
+
+#entrance{
+    position:absolute;
+    cursor:pointer;
+    top: 6%;
+    left: 35%;
+    width: 61px;
+    height: 67px;
+}
